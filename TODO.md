@@ -1,1 +1,1 @@
-1. Create / Update Conents automatically after builds, from meta.yaml
+1. Create / Update PACKAGES automatically after builds, from meta.yaml
