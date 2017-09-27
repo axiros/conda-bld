@@ -1,6 +1,16 @@
 # conda-bld
 
-conda-forge builds from staged-recipes
+conda(-forge) builds from staged-recipes - for packages not yet in official conda-forge repos.
+AXC2 supported source format.
+
+- gives you prefix aware distri independent binary packages
+- packed within single files
+- with a [well documented](https://conda.io/docs/user-guide/tasks/build-packages/environment-variables.html) build machinery
+
+> Before you bite into this apple first check conda and conda-forge if your required package is already there, you have pretty good chances.
+
+[This](http://wesmckinney.com/blog/conda-forge-centos-moment/) about conda.
+
 
 # HowTo
 
