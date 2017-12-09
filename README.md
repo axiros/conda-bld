@@ -14,7 +14,7 @@ AXC2 supported source format.
 
 # HowTo
 
-## Get educatd on conda forge
+## Get educated on conda forge
 
 https://github.com/conda-forge/staged-recipes
 
@@ -29,20 +29,40 @@ cd /xc
 git clone git@github.com:axiros/conda-bld
 ```
 
+## 
+
+```bash
+conda install conda-build jinja
+yum groupinstall 'Development Tools'
+```
+
 ## Create a build recipe and build
 
-e.g. for tinc
+e.g. for tinc I did:
 
 ```
+cd /root/
 git clone git@github.com:axiros/staged-recipes.git
 cd staged-recipes
 cp -a example/gnutls tinc
 
 <edit tinc/build.sh and tinc/meta.yml>
 
+# add deps, see below
 conda build tinc # creates the artifact within /xc/conda-bld/tinc....tar.bz2
 
 ```
+
+### Handling Dependencies
+
+tinc required openssl, ncurses lzo... 
+
+I had no luck marking those as build and/or run dependencies, have to investigate.
+
+So I took them from the host package mgr for now (yum install zlib-devel ....)
+
+
+
 
 ## Test, Push
 
